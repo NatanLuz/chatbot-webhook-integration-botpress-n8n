@@ -83,20 +83,20 @@ Nesse modelo:
 
 ### Diagramas do Sistema
 
-- Arquitetura geral do chatbot:  
-  ![Arquitetura do Botpress](docs/botpress-architecture.png)
+- Arquitetura geral do chatbot (visão 1):  
+  ![Arquitetura do Botpress](docs/arquiteturabotpress.png)
 
-- Workflow principal no Botpress:  
-  ![Workflow do Botpress](docs/botpress-workflow.png)
+- Arquitetura geral do chatbot (visão 2):  
+  ![Arquitetura do Botpress 2](docs/arquiteturabotpress2.png)
 
 - Automação no n8n:  
-  ![Automação n8n](docs/n8n-automation.png)
+  ![Automação n8n](docs/automacaon8n.png)
 
 - Workflow dentro do n8n:  
   ![Workflow n8n](docs/n8n-workflow.png)
 
 - Exemplo de teste do chatbot:  
-  ![Teste do chatbot](docs/chatbot-test.png)
+  ![Teste do chatbot](docs/testechatbot.png)
 
 ## Implementação do Chatbot (Botpress)
 
