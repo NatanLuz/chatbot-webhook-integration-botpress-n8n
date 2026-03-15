@@ -41,19 +41,7 @@ A solução foi construída utilizando uma arquitetura baseada em integração d
 
 ## Diagrama de Arquitetura
 
-Usuário
-↓
-Chatbot (Botpress)
-↓
-Webhook HTTP
-↓
-n8n (Workflow Automation)
-↓
-Switch Node
-↓
-Respond to Webhook
-↓
-Resposta ao chatbot
+Usuário > Chatbot(Botpress) > Webhook HTTP > n8n(Workflow Automation) > Switch Node > Respond to Webhook > Resposta ao chatbot
 
 A comunicação entre os componentes ocorre da seguinte forma:
 
