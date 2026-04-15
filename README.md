@@ -249,10 +249,6 @@ A arquitetura utilizada neste projeto pode ser aplicada em diversos cenários, c
 - Automação de processos empresariais.
 - Integração entre plataformas conversacionais e sistemas internos.
 
-## Licença
-
-Este projeto está licenciado sob os termos da **MIT License**. Consulte o arquivo `LICENSE` na raiz do repositório para mais detalhes.
-
 ## Autor
 
 **Natan da Luz**  
