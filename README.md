@@ -5,7 +5,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Container-blue)
 ![Webhooks](https://img.shields.io/badge/Webhooks-HTTP-green)
 
-## Descrição Curta
+## Descrição Sobre o Projeto
 
 Projeto de integração entre um chatbot no Botpress e um workflow no n8n, com comunicação via Webhook HTTP para roteamento de atendimentos por departamento, processamento no backend e retorno de resposta em JSON.
 
