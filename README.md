@@ -13,7 +13,7 @@ A aplicação simula o atendimento automatizado da empresa fictícia **Conecta S
 
 O objetivo do projeto é apresentar, de maneira prática, como plataformas de chatbot podem atuar como interface de entrada para processos automatizados e integrações entre serviços.
 
-### Arquitetura da integração
+### Arquitetura da integração feita
 
 ```text
 Usuário
