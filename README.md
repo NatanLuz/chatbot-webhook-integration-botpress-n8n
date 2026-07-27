@@ -7,7 +7,7 @@
 
 ## 📖 Sobre o projeto
 
-O **Chatbot Webhook Integration** demonstra a integração entre um chatbot desenvolvido no Botpress e um fluxo de automação criado no n8n. A comunicação entre os sistemas ocorre por Webhooks HTTP, enquanto o ambiente de automação pode ser executado em um container Docker.
+O **Chatbot Webhook Integration** demonstra a integração entre um chatbot desenvolvido no Botpress e um fluxo de automação criado no N8N. A comunicação entre os sistemas ocorre por Webhooks HTTP, enquanto o ambiente de automação pode ser executado em um container Docker.
 
 A aplicação simula o atendimento automatizado da empresa fictícia ""**Conecta Sul Internet**"". A solução separa a interface conversacional, gerenciada pelo Botpress, da lógica de processamento, executada pelos workflows do n8n. Essa divisão resulta em uma arquitetura desacoplada, modular e organizada.
 
