@@ -1,4 +1,4 @@
-# Integração de Webhook para Chatbot (Botpress + N8N)
+# Integração de Webhook para Chatbot Botpress + N8N
 
 ![Botpress](https://img.shields.io/badge/Botpress-Chatbot-blue)
 ![n8n](https://img.shields.io/badge/n8n-Automation-orange)
