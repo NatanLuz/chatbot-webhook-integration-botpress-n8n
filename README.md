@@ -1,22 +1,22 @@
-# Integração de Webhook para Chatbot Botpress + N8N
+# Webhook Integration for Botpress Chatbot + n8n
 
 ![Botpress](https://img.shields.io/badge/Botpress-Chatbot-blue)
 ![n8n](https://img.shields.io/badge/n8n-Automation-orange)
 ![Docker](https://img.shields.io/badge/Docker-Container-blue)
 ![Webhooks](https://img.shields.io/badge/Webhooks-HTTP-green)
 
-## 📖 Sobre o projeto
+## 📖 About the project
 
-O **Chatbot Webhook Integration** demonstra a integração entre um chatbot desenvolvido no Botpress e um fluxo de automação criado no N8N. A comunicação entre os sistemas ocorre por Webhooks HTTP, enquanto o ambiente de automação pode ser executado em um container Docker.
+**Chatbot Webhook Integration** demonstrates the integration between a chatbot developed in Botpress and an automation workflow created in n8n. Communication between the systems takes place through HTTP Webhooks, while the automation environment can run in a Docker container.
 
-A aplicação simula o atendimento automatizado da empresa fictícia ""**Conecta Sul Internet**"". A solução separa a interface conversacional, gerenciada pelo Botpress, da lógica de processamento, executada pelos workflows do n8n. Essa divisão resulta em uma arquitetura desacoplada, modular e organizada.
+The application simulates the automated customer service of the fictional company **Conecta Sul Internet**. The solution separates the conversational interface, managed by Botpress, from the processing logic, handled by n8n workflows. This separation results in a decoupled, modular, and organized architecture.
 
-O objetivo do projeto é apresentar, de maneira prática, como plataformas de chatbot podem atuar como interface de entrada para processos automatizados e integrações entre serviços.
+The goal of this project is to demonstrate, in a practical way, how chatbot platforms can serve as an entry interface for automated processes and integrations between services.
 
-## Arquitetura da integração feita
+## Integration architecture
 
 ```text
-Usuário
+User
   ↓
 Chatbot (Botpress)
   ↓
@@ -28,121 +28,121 @@ Switch Node
   ↓
 Respond to Webhook
   ↓
-Resposta ao chatbot
+Response to the chatbot
 ```
 
-### Fluxo da aplicação
+### Application flow
 
-1. O usuário inicia a conversa;
-2. o chatbot apresenta os departamentos disponíveis;
-3. o Botpress envia uma requisição HTTP para o n8n;
-4. o Webhook Node recebe a requisição;
-5. o Switch Node identifica o departamento selecionado;
-6. o fluxo correspondente é executado;
-7. o Respond to Webhook retorna uma resposta em JSON;
-8. o Botpress apresenta a resposta ao usuário.
+1. The user starts the conversation;
+2. the chatbot presents the available departments;
+3. Botpress sends an HTTP request to n8n;
+4. the Webhook Node receives the request;
+5. the Switch Node identifies the selected department;
+6. the corresponding workflow is executed;
+7. Respond to Webhook returns a JSON response;
+8. Botpress presents the response to the user.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- Chatbot desenvolvido no Botpress Studio;
-- menu de atendimento para Suporte Técnico, Financeiro e Vendas;
-- workflows específicos para os departamentos;
-- comunicação entre Botpress e n8n por Webhooks HTTP;
-- processamento automatizado das requisições no n8n;
-- roteamento por departamento com o Switch Node;
-- retorno das respostas em formato JSON pelo Respond to Webhook;
-- execução do n8n em ambiente Docker;
-- exportação do chatbot no formato `.bpz`;
-- exportação do workflow no formato `.json`;
-- arquitetura modular baseada em workflows.
+- Chatbot developed in Botpress Studio;
+- customer service menu for Technical Support, Finance, and Sales;
+- department-specific workflows;
+- communication between Botpress and n8n through HTTP Webhooks;
+- automated request processing in n8n;
+- department-based routing with the Switch Node;
+- responses returned in JSON format by Respond to Webhook;
+- n8n running in a Docker environment;
+- chatbot export in `.bpz` format;
+- workflow export in `.json` format;
+- modular workflow-based architecture.
 
 ## 🖼️ Screenshots
 
-### Arquitetura do Botpress
+### Botpress architecture
 
-![Arquitetura do Botpress](docs/arquiteturabotpress.png)
+![Botpress architecture](docs/arquiteturabotpress.png)
 
-### Estrutura dos workflows
+### Workflow structure
 
-![Estrutura dos workflows no Botpress](docs/arquiteturabotpress2.png)
+![Workflow structure in Botpress](docs/arquiteturabotpress2.png)
 
-### Automação no n8n
+### n8n automation
 
-![Automação implementada no n8n](docs/automacaon8n.png)
+![Automation implemented in n8n](docs/automacaon8n.png)
 
-### Workflow do n8n
+### n8n workflow
 
-![Workflow configurado no n8n](docs/n8n-workflow.png)
+![Workflow configured in n8n](docs/n8n-workflow.png)
 
-### Teste do chatbot
+### Chatbot test
 
-![Chatbot em execução](docs/testechatbot.png)
+![Chatbot running](docs/testechatbot.png)
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-- **Botpress Studio:** criação da interface conversacional e dos fluxos do chatbot;
-- **n8n:** processamento das requisições e automação dos workflows;
-- **Docker:** execução do n8n em um ambiente isolado e reproduzível;
-- **Webhooks HTTP:** comunicação entre o Botpress e o n8n;
-- **JSON:** formato utilizado para troca de dados entre os sistemas.
+- **Botpress Studio:** creation of the chatbot's conversational interface and flows;
+- **n8n:** request processing and workflow automation;
+- **Docker:** running n8n in an isolated and reproducible environment;
+- **HTTP Webhooks:** communication between Botpress and n8n;
+- **JSON:** format used to exchange data between the systems.
 
-## ⚙️ Como executar
+## ⚙️ How to run
 
-### Pré-requisitos
+### Prerequisites
 
 - Git;
 - Docker;
 - Docker Compose;
-- acesso ao Botpress Studio.
+- access to Botpress Studio.
 
-### Clonar o repositório
+### Clone the repository
 
 ```bash
 git clone https://github.com/NatanLuz/chatbot-webhook-integration-botpress-n8n.git
 cd chatbot-webhook-integration-botpress-n8n
 ```
 
-Também é possível baixar os arquivos diretamente pelo GitHub.
+You can also download the files directly from GitHub.
 
-### Executar o n8n com Docker
+### Run n8n with Docker
 
-Inicie o container em segundo plano:
+Start the container in the background:
 
 ```bash
 docker run -d --name n8n -p 5678:5678 n8nio/n8n
 ```
 
-Após a inicialização, acesse o painel em:
+After it starts, access the dashboard at:
 
 ```text
 http://localhost:5678
 ```
 
-### Executar o n8n com Docker Compose
+### Run n8n with Docker Compose
 
-Como alternativa, execute na raiz do projeto:
+Alternatively, run this command from the project root:
 
 ```bash
 docker compose up -d
 ```
 
-O serviço será iniciado em segundo plano por meio do arquivo `docker-compose.yml`, com a porta `5678` exposta, volume persistente `n8n_data` e política de reinício `restart: unless-stopped`.
+The service will start in the background through the `docker-compose.yml` file, exposing port `5678`, using the persistent `n8n_data` volume, and applying the `restart: unless-stopped` restart policy.
 
-### Importar o workflow no n8n
+### Import the workflow into n8n
 
-1. Acesse `http://localhost:5678`;
-2. selecione a opção **Import Workflow**;
-3. importe o arquivo `n8n/workflow.json`.
+1. Open `http://localhost:5678`;
+2. select **Import Workflow**;
+3. import the `n8n/workflow.json` file.
 
-### Importar o chatbot no Botpress
+### Import the chatbot into Botpress
 
-1. Abra o Botpress Studio;
-2. selecione a opção **Import Bot**;
-3. importe o arquivo `botpress/conecta-sul-chatbot.bpz`.
+1. Open Botpress Studio;
+2. select **Import Bot**;
+3. import the `botpress/conecta-sul-chatbot.bpz` file.
 
-## 📂 Estrutura do projeto
+## 📂 Project structure
 
-O repositório mantém separadas as exportações do chatbot, do workflow e as imagens da documentação:
+The repository keeps the chatbot export, workflow export, and documentation images in separate directories:
 
 ```text
 .
@@ -159,25 +159,27 @@ O repositório mantém separadas as exportações do chatbot, do workflow e as i
 └── README.md
 ```
 
-- `botpress/conecta-sul-chatbot.bpz`: exportação do chatbot;
-- `n8n/workflow.json`: exportação do workflow de automação;
-- `docs/`: diagramas e capturas de tela da solução;
-- `README.md`: documentação técnica do projeto.
+- `botpress/conecta-sul-chatbot.bpz`: chatbot export;
+- `n8n/workflow.json`: automation workflow export;
+- `docs/`: solution diagrams and screenshots;
+- `README.md`: project technical documentation.
 
-## 🌐 Deploy
+## 🌐 Deployment
 
-Este é um projeto de integração entre plataformas. O n8n pode ser executado localmente com Docker ou hospedado em um servidor compatível. O Botpress pode ser utilizado localmente ou em seu ambiente cloud, conforme a edição adotada.
+This is a platform integration project. n8n can run locally with Docker or be hosted on a compatible server. Botpress can be used locally or in its cloud environment, depending on the edition being used.
 
-Para um ambiente de produção, a arquitetura pode ser adaptada com a publicação dos serviços, configuração das URLs dos Webhooks, persistência dos dados do n8n e aplicação dos controles de segurança necessários.
+For a production environment, the architecture can be adapted by publishing the services, configuring the Webhook URLs, persisting n8n data, and applying the necessary security controls.
 
-## 👤 Autor
+## 👤 Author
 
 **Natan Da Luz**
 
 - LinkedIn: [linkedin.com/in/natandaluz](https://www.linkedin.com/in/natandaluz/)
+
 - Portfólio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
+
 - E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sem uma licença definida no momento.
+This project does not currently have a defined license.
